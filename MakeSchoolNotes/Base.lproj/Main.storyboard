@@ -6,6 +6,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,6 +19,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="separatorColor" red="0.32549019610000002" green="0.6588235294" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.73333333329999995" green="0.13102502199999999" blue="0.10072669839999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="listNotesTableViewCell" id="e5G-wG-mNh" customClass="ListNotesTableViewCell" customModule="MakeSchoolNotes" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="60"/>
@@ -68,6 +71,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Notes" id="vQ8-qA-zxL" userLabel="Notes">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="rol-7i-uqt">
+                            <color key="tintColor" red="0.96078431369999995" green="0.57647058819999997" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="IMi-LM-BYg" kind="show" identifier="addNote" id="jIu-GF-rJd"/>
                             </connections>
@@ -93,10 +97,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E0r-Bc-hH9">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E0r-Bc-hH9">
                                 <rect key="frame" x="15" y="74" width="345" height="30"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="titleTextField:" destination="opD-dS-e51" eventType="editingDidEnd" id="SQg-yl-WbW"/>
@@ -117,11 +121,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="thr-kZ-0eT">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="5mq-Cw-9ts">
+                            <color key="tintColor" red="0.73333333329999995" green="0.13102502199999999" blue="0.10072669839999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="opD-dS-e51" kind="unwind" identifier="cancel" unwindAction="unwindWithSegue:" id="Zo9-8k-RCu"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="AV8-4S-ygb">
+                            <color key="tintColor" name="tcSeafoamGreen"/>
                             <connections>
                                 <segue destination="opD-dS-e51" kind="unwind" identifier="save" unwindAction="unwindWithSegue:" id="Gpv-xK-jzt"/>
                             </connections>
@@ -156,6 +162,11 @@
             <point key="canvasLocation" x="561.60000000000002" y="266.26686656671666"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="tcSeafoamGreen">
+            <color red="0.34900000689999999" green="0.85500001910000001" blue="0.64300000670000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ZeM-gY-eWC"/>
     </inferredMetricsTieBreakers>

@@ -45,7 +45,7 @@ class ListNotesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "listNotesTableViewCell", for: indexPath) as! ListNotesTableViewCell
         
-        let note = notes[indexPath.row]
+        let note = notes[notes.count-1 - indexPath.row]
         cell.noteTitleLabel.text = note.title
         cell.noteModificationTimeLabel.text = note.modificationTime?.convertToString() ?? "unknown"
         
